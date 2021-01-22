@@ -6,8 +6,12 @@
 #include <string>
 
 int cToF(){
-    int x =0;
-    return x;
+    int temperature =0;
+    return temperature;
+}
+int ftoC(){
+    int temperature= 0;
+    return temperature;
 }
 
 int main(int argc,const char** argv ) {
