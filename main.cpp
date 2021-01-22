@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <vector>
 
 double c_cToF(const char* input){
     std::istringstream number(input);
@@ -18,12 +19,18 @@ double cpp_ftoC(const char* input){
 }
 
 int main(int argc,const char* argv[] ) {
-
+    std::vector<std::string> arguments;
+    arguments.reserve(5);
+    for(int index=0;index<argc;++index){
+        arguments.push_back(argv[index]);
+    }
+    for(auto i:arguments){
+        std::cout<<" Test: "<< i<< std::endl;
+    }
 
      std::cout<<"Argument zero: "<< argv[0]<<std::endl;// name of file with the .exe
-
-        std::cout<< "Fahrenheit: "<< argv[2] << " to celsius: " <<cpp_ftoC(argv[2])<<std::endl;
-        std::cout<< "Celsius: "<< argv[2]<< " to Fahrenheit: " << c_cToF(argv[2])<<std::endl;
+     std::cout<< "Fahrenheit: "<< argv[2] << " to celsius: " <<cpp_ftoC(argv[2])<<std::endl;
+     std::cout<< "Celsius: "<< argv[2]<< " to Fahrenheit: " << c_cToF(argv[2])<<std::endl;
 
 
 
