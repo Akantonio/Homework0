@@ -2,7 +2,7 @@
 //Homework0: Celsius to Fahrenheit
 
 #include <iostream>
-#include <vector>
+
 #include <string>
 
 int cToF(){
@@ -11,23 +11,19 @@ int cToF(){
 }
 double cpp_ftoC(const char* input){
 
-    double temperature= strtod(input,NULL);
+    double temperature= strtod(input,nullptr);
     return (temperature-32)/(9.0/5);
 }
 
 int main(int argc,const char* argv[] ) {
-    int storage= 10;
-    std::vector<std::string> argS;
-    argS.reserve(storage);
-    for(int index=0;index<argc;++index){
-        argS.emplace_back(argv[index]);
-    }
+
+     std::cout<<"Argument zero: "<< argv[0]<<std::endl;
+
+        std::cout<< cpp_ftoC(argv[2]);
 
 
 
-    for(const auto& i:argS){    //check what is inside the argv
-        std::cout<< i << std::endl;
-    }
+
 
 
     return 0;
