@@ -27,10 +27,14 @@ int main(int argc,const char* argv[] ) {
     for(auto i:arguments){
         std::cout<<" Test: "<< i<< std::endl;
     }
+    if(arguments[1]=="--ftoc"){
+        std::cout<< "Fahrenheit: "<< argv[2] << " to celsius: " <<cpp_ftoC(argv[2])<<std::endl;
+    }
+    if(arguments[1]=="--ctof") {
+        std::cout << "Celsius: " << argv[2] << " to Fahrenheit: " << c_cToF(argv[2]) << std::endl;
+    }
 
-     std::cout<<"Argument zero: "<< argv[0]<<std::endl;// name of file with the .exe
-     std::cout<< "Fahrenheit: "<< argv[2] << " to celsius: " <<cpp_ftoC(argv[2])<<std::endl;
-     std::cout<< "Celsius: "<< argv[2]<< " to Fahrenheit: " << c_cToF(argv[2])<<std::endl;
+
 
 
 
