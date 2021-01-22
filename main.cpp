@@ -13,7 +13,7 @@ int main(int argc,const char** argv ) {
         argS.emplace_back(argv[index]);
     }
 
-    for(const auto& i:argS){
+    for(const auto& i:argS){    //check what is inside the argv
         std::cout<< i << std::endl;
     }
 
