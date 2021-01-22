@@ -19,27 +19,32 @@ double cpp_ftoC(const char* input){
 }
 
 int main(int argc,const char* argv[] ) {
-    std::vector<std::string> arguments;
-    arguments.reserve(5);
-    for(int index=0;index<argc;++index){
-        arguments.push_back(argv[index]);
+    if(argc<2 || argc>3){
+        std::cout<<"Must type: [--ctof or --ftoc] and a [number]"<< std::endl;
+    }else {
+        std::vector<std::string> arguments;
+        arguments.reserve(3);
+        for (int index = 0; index < 3; ++index) {
+            arguments.push_back(argv[index]);
+        }
+
+        for (auto i:arguments) {
+            std::cout << " Test: " << i << std::endl;
+        }
+
+        if(arguments[1]=="--ftoc"|| arguments[1]=="--ctof"){
+            if (arguments[1] == "--ftoc") {
+                std::cout << "Fahrenheit: " << argv[2] << " to celsius: " << cpp_ftoC(argv[2]) << std::endl;
+            }
+            if (arguments[1] == "--ctof") {
+                std::cout << "Celsius: " << argv[2] << " to Fahrenheit: " << c_cToF(argv[2]) << std::endl;
+            }
+        }else{
+            std::cout<< "WRONG INPUT TYPE: [--ctof or --ftoc] and a [number]" << std::endl;
+        }
+
+
     }
-    for(auto i:arguments){
-        std::cout<<" Test: "<< i<< std::endl;
-    }
-    if(arguments[1]=="--ftoc"){
-        std::cout<< "Fahrenheit: "<< argv[2] << " to celsius: " <<cpp_ftoC(argv[2])<<std::endl;
-    }
-    if(arguments[1]=="--ctof") {
-        std::cout << "Celsius: " << argv[2] << " to Fahrenheit: " << c_cToF(argv[2]) << std::endl;
-    }
-
-
-
-
-
-
-
 
     return 0;
 }
