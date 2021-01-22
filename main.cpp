@@ -5,8 +5,8 @@
 
 #include <string>
 
-int cToF(){
-    int temperature =0;
+double c_cToF(){
+    double temperature =0;
     return temperature;
 }
 double cpp_ftoC(const char* input){
@@ -16,6 +16,7 @@ double cpp_ftoC(const char* input){
 }
 
 int main(int argc,const char* argv[] ) {
+
 
      std::cout<<"Argument zero: "<< argv[0]<<std::endl;
 
