@@ -9,21 +9,19 @@ int cToF(){
     int temperature =0;
     return temperature;
 }
-int ftoC(){
-    int temperature= 0;
-    return temperature;
+double cpp_ftoC(const char* input){
+
+    double temperature= strtod(input,NULL);
+    return (temperature-32)/(9.0/5);
 }
 
-int main(int argc,const char** argv ) {
+int main(int argc,const char* argv[] ) {
     int storage= 10;
     std::vector<std::string> argS;
     argS.reserve(storage);
     for(int index=0;index<argc;++index){
         argS.emplace_back(argv[index]);
     }
-
-
-
 
 
 
