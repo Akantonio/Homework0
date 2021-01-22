@@ -5,6 +5,11 @@
 #include <vector>
 #include <string>
 
+int cToF(){
+    int x =0;
+    return x;
+}
+
 int main(int argc,const char** argv ) {
     int storage= 10;
     std::vector<std::string> argS;
@@ -12,6 +17,11 @@ int main(int argc,const char** argv ) {
     for(int index=0;index<argc;++index){
         argS.emplace_back(argv[index]);
     }
+
+
+
+
+
 
     for(const auto& i:argS){    //check what is inside the argv
         std::cout<< i << std::endl;
