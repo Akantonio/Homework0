@@ -28,9 +28,10 @@ int main(int argc,const char* argv[] ) {
             arguments.push_back(argv[index]);
         }
 
-        for (auto i:arguments) {
+//Testing Purposes
+/*        for (auto i:arguments) {
             std::cout << " Test: " << i << std::endl;
-        }
+        }*/
 
         if(arguments[1]=="--ftoc"|| arguments[1]=="--ctof"){
             if (arguments[1] == "--ftoc") {
